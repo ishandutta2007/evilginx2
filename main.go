@@ -35,11 +35,19 @@ func joinPath(base_path string, rel_path string) string {
 	return ret
 }
 
-func showAd() {
+func showEvilginxProAd() {
 	lred := color.New(color.FgHiRed)
 	lyellow := color.New(color.FgHiYellow)
 	white := color.New(color.FgHiWhite)
-	message := fmt.Sprintf("%s: %s %s", lred.Sprint("Evilginx Mastery Course"), lyellow.Sprint("https://academy.breakdev.org/evilginx-mastery"), white.Sprint("(learn how to create phishlets)"))
+	message := fmt.Sprintf("%s %s: %s %s", lred.Sprint("Evilginx Pro"), white.Sprint("is finally out"), lyellow.Sprint("https://evilginx.com"), white.Sprint("(advanced phishing framework for red teams)"))
+	log.Info("%s", message)
+}
+
+func showEvilginxMasteryAd() {
+	lyellow := color.New(color.FgHiYellow)
+	white := color.New(color.FgHiWhite)
+	hcyan := color.New(color.FgHiCyan)
+	message := fmt.Sprintf("%s: %s %s", hcyan.Sprint("Evilginx Mastery Course"), lyellow.Sprint("https://academy.breakdev.org/evilginx-mastery"), white.Sprint("(learn how to create phishlets)"))
 	log.Info("%s", message)
 }
 
@@ -55,7 +63,8 @@ func main() {
 	exe_dir := filepath.Dir(exe_path)
 
 	core.Banner()
-	showAd()
+	showEvilginxProAd()
+	showEvilginxMasteryAd()
 
 	_log.SetOutput(log.NullLogger().Writer())
 	certmagic.Default.Logger = zap.NewNop()
