@@ -20,6 +20,31 @@ Present version is fully written in GO as a standalone application, which implem
 
 I am very much aware that Evilginx can be used for nefarious purposes. This work is merely a demonstration of what adept attackers can do. It is the defender's responsibility to take such attacks into consideration and find ways to protect their users against this type of phishing attacks. Evilginx should be used only in legitimate penetration testing assignments with written permission from to-be-phished parties.
 
+## Evilginx Pro is now available!
+
+This is it! After over two years of development, countless delays, and hundreds of manual company verifications, concluded with multiple hurdles related to export regulations, [Evilginx Pro is finally live!](https://evilginx.com)
+
+<p align="center">
+  <a href="https://evilginx.com"><img alt="Evilginx Mastery" src="https://breakdev.org/content/images/size/w2000/2025/03/evilginx_pro_release_cover.png" height="320" /></a>
+</p>
+
+Evilginx Pro is the fruit of a passion I've had for a long time in developing offensive security tools for cybersecurity enthusiasts. The journey has just begun, and now that the product is officially released, I can focus on making it even better by implementing all the ideas I've planned for it.
+
+### Key features:
+
+- Out-of-the-box **phishing detection evasion** (including Chrome's Enchanced Browser Protection)
+- Tested and maintained **official phishlets database**
+- **Botguard** to **prevent bot traffic** by default (same concept as Cloudflare Turnstile)
+- **Evilpuppet** for advanced phishing capability (Google)
+- External **DNS providers** with multi-domain support
+- **Website spoofing** for unauthorized requests
+- **JavaScript** & **HTML obfuscation**
+- **Wildcard TLS certificates**
+- **Automated** server deployment
+- **SQLite** database support
+
+Find out more on the [official release blog post](https://breakdev.org/evilginx-pro-release/).
+
 ## Evilginx Mastery Training Course
 
 If you want everything about reverse proxy phishing with **Evilginx** - check out my [Evilginx Mastery](https://academy.breakdev.org/evilginx-mastery) course!
