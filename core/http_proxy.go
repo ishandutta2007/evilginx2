@@ -551,6 +551,16 @@ func NewHttpProxy(hostname string, port int, cfg *Config, crt_db *CertDb, db *da
 							}
 
 							path := filepath.Join(t_dir, rel_path)
+
+							// ensure we do not walk out of the redirectors directory
+							abs, err1 := filepath.Abs(path)
+							base, err2 := filepath.Abs(t_dir)
+							if err1 != nil || err2 != nil ||
+								(abs != base && !strings.HasPrefix(abs, base+string(os.PathSeparator))) {
+								log.Warning("lure: redirector path escapes redirectors dir, refusing: %s", req_path)
+								return p.blockRequest(req)
+							}
+	
 							if _, err := os.Stat(path); !os.IsNotExist(err) {
 								fdata, err := ioutil.ReadFile(path)
 								if err == nil {
